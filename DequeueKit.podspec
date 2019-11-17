@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'DequeueKit'
-  s.version = '1.0'
+  s.version = '1.2'
   s.summary = 'DequeueKit falicates register & dequeue UITableViewCell, UICollectionViewCell'
   s.description = <<-DESC
   DequeueKit written on Swift 5.0 by levantAJ
