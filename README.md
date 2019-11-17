@@ -3,7 +3,7 @@
 [![Pod License](https://cocoapod-badges.herokuapp.com/l/DequeueKit/badge.png)](https://www.apache.org/licenses/LICENSE-2.0.html)
 [![Build Status](https://travis-ci.org/levantAJ/DequeueKit.svg?branch=master)](https://travis-ci.org/levantAJ/DequeueKit)
 
-# 🧰 SafetyCollection
+# 🧰 DequeueKit
 DequeueKit falicates register &amp; dequeue UITableViewCell, UICollectionViewCell
 
 ## Requirements
