@@ -18,8 +18,8 @@ There is a way to use DequeueKit in your project:
 
 ### Installation with CocoaPods
 
-```
-pod 'DequeueKit'
+```ruby
+pod 'DequeueKit', '1.3'
 ```
 ### Build Project
 
@@ -33,19 +33,69 @@ import DequeueKit
 ```
 
 ### UITableView
-```
-tableView.register(class: YourTableViewCell.self) // If you're using class only
-tableView.register(nib: YourTableViewCell.self) // If you're using xib file
 
+##### Register with nib
+
+```swift
+tableView.register(nib: YourTableViewCell.self)
+```
+
+##### Register with class
+
+```swift
+tableView.register(class: YourTableViewCell.self)
+```
+
+##### Dequeue with class or nib
+
+```swift
 let cell = tableView.dequeueReusableCell(type: YourTableViewCell.self, for: indexPath)
 ```
 
 ### UICollectionView
-```
-collectionView.register(class: YouCollectionViewCell.self) // If you're using class only
-collectionView.register(nib: YouCollectionViewCell.self) // If you're using xib file
 
+#### Dequeue Reusable Cell
+
+##### Register with nib
+
+```swift
+collectionView.register(nib: YouCollectionViewCell.self)
+```
+
+##### Register with class
+
+```swift
+collectionView.register(class: YouCollectionViewCell.self)
+```
+
+#### Dequeue with class or nib
+
+```swift
 let cell = collectionView.dequeueReusableCell(type: YourTableViewCell.self, for: indexPath)
+```
+
+#### Dequeue Reusable Supplementary View
+
+##### Register with nib
+
+```swift
+collectionView.register(nib: YourHeaderView.self, of: .header)
+collectionView.register(nib: YourFooterView.self, of: .footer)
+```
+
+##### Register with class
+
+```swift
+collectionView.register(class: YourHeaderView.self, of: .header)
+collectionView.register(class: YourFooterView.self, of: .footer)
+```
+
+##### Dequeue with class or nib
+
+```swift
+let headerView = collectionView.dequeueReusableSupplementaryView(type: YourHeaderView.self, of: .header, for: indexPath)
+
+let footerView = collectionView.dequeueReusableSupplementaryView(type: YourFooterView.self, of: .footer, for: indexPath)
 ```
 
 ## Author
